@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    08/02/2024  09:53:27  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    08/02/2024  10:48:25  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
@@ -26,9 +26,9 @@ LINK MAP OF MODULE:  .\Objects\Project (?C_STARTUP)
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
-            CODE    0003H     004CH     UNIT         ?PR?MAIN?MAIN
-            CODE    004FH     000CH     UNIT         ?C_C51STARTUP
-            CODE    005BH     0009H     UNIT         ?PR?DELAY10MS?MAIN
+            CODE    0003H     0015H     UNIT         ?PR?MAIN?MAIN
+            CODE    0018H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0024H     0009H     UNIT         ?PR?DELAY10MS?MAIN
 
 
 
@@ -52,20 +52,20 @@ SYMBOL TABLE OF MODULE:  .\Objects\Project (?C_STARTUP)
   ----------------------------------
 
   -------         MODULE        ?C_STARTUP
-  C:004FH         SEGMENT       ?C_C51STARTUP
+  C:0018H         SEGMENT       ?C_C51STARTUP
   I:0008H         SEGMENT       ?STACK
   C:0000H         PUBLIC        ?C_STARTUP
   D:00E0H         SYMBOL        ACC
   D:00F0H         SYMBOL        B
   D:0083H         SYMBOL        DPH
   D:0082H         SYMBOL        DPL
-BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/02/2024  09:53:27  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/02/2024  10:48:25  PAGE 2
 
 
   N:0000H         SYMBOL        IBPSTACK
   N:0100H         SYMBOL        IBPSTACKTOP
   N:0080H         SYMBOL        IDATALEN
-  C:0052H         SYMBOL        IDATALOOP
+  C:001BH         SYMBOL        IDATALOOP
   N:0000H         SYMBOL        PBPSTACK
   N:0100H         SYMBOL        PBPSTACKTOP
   N:0000H         SYMBOL        PDATALEN
@@ -74,18 +74,18 @@ SYMBOL TABLE OF MODULE:  .\Objects\Project (?C_STARTUP)
   N:0000H         SYMBOL        PPAGEENABLE
   D:00A0H         SYMBOL        PPAGE_SFR
   D:0081H         SYMBOL        SP
-  C:004FH         SYMBOL        STARTUP1
+  C:0018H         SYMBOL        STARTUP1
   N:0000H         SYMBOL        XBPSTACK
   N:0000H         SYMBOL        XBPSTACKTOP
   N:0000H         SYMBOL        XDATALEN
   N:0000H         SYMBOL        XDATASTART
   C:0000H         LINE#         126
-  C:004FH         LINE#         133
-  C:0051H         LINE#         134
-  C:0052H         LINE#         135
-  C:0053H         LINE#         136
-  C:0055H         LINE#         185
-  C:0058H         LINE#         196
+  C:0018H         LINE#         133
+  C:001AH         LINE#         134
+  C:001BH         LINE#         135
+  C:001CH         LINE#         136
+  C:001EH         LINE#         185
+  C:0021H         LINE#         196
   -------         ENDMOD        ?C_STARTUP
 
   -------         MODULE        MAIN
@@ -99,10 +99,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\Project (?C_STARTUP)
   D:00B8H         PUBLIC        IP
   C:0003H         PUBLIC        main
   D:0098H         PUBLIC        SCON
-  C:005BH         PUBLIC        Delay10ms
+  C:0024H         PUBLIC        Delay10ms
   D:0088H         PUBLIC        TCON
   B:00E8H.2       PUBLIC        P42
-  B:00E8H.3       PUBLIC        P43
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          DELAY10MS
@@ -110,51 +109,38 @@ SYMBOL TABLE OF MODULE:  .\Objects\Project (?C_STARTUP)
   D:0007H         SYMBOL        i
   D:0006H         SYMBOL        j
   -------         ENDDO         
-  C:005BH         LINE#         7
-  C:005BH         LINE#         8
-  C:005BH         LINE#         11
-  C:005DH         LINE#         12
-  C:005FH         LINE#         14
-  C:005FH         LINE#         15
-  C:0061H         LINE#         16
-  C:0063H         LINE#         17
+  C:0024H         LINE#         6
+  C:0024H         LINE#         7
+  C:0024H         LINE#         10
+  C:0026H         LINE#         11
+  C:0028H         LINE#         13
+  C:0028H         LINE#         14
+  C:002AH         LINE#         15
+  C:002CH         LINE#         16
   -------         ENDPROC       DELAY10MS
-BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/02/2024  09:53:27  PAGE 3
-
-
   -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/02/2024  10:48:25  PAGE 3
+
+
   -------         DO            
   D:0005H         SYMBOL        i
   -------         ENDDO         
+  C:0003H         LINE#         18
   C:0003H         LINE#         19
   C:0003H         LINE#         20
-  C:0003H         LINE#         21
+  C:0005H         LINE#         21
   C:0005H         LINE#         22
-  C:0008H         LINE#         23
-  C:0008H         LINE#         24
-  C:0008H         LINE#         25
-  C:000BH         LINE#         26
-  C:000BH         LINE#         27
-  C:000EH         LINE#         28
-  C:0011H         LINE#         29
-  C:0014H         LINE#         31
-  C:0015H         LINE#         32
-  C:001BH         LINE#         33
-  C:001DH         LINE#         35
-  C:002BH         LINE#         36
-  C:002BH         LINE#         37
-  C:002EH         LINE#         38
-  C:002EH         LINE#         39
-  C:0031H         LINE#         40
-  C:0034H         LINE#         41
-  C:0037H         LINE#         43
-  C:003AH         LINE#         44
-  C:003EH         LINE#         46
-  C:003FH         LINE#         47
-  C:004DH         LINE#         48
-  C:004DH         LINE#         51
+  C:0005H         LINE#         26
+  C:0008H         LINE#         27
+  C:0008H         LINE#         28
+  C:000BH         LINE#         29
+  C:000EH         LINE#         30
+  C:0011H         LINE#         31
+  C:0012H         LINE#         32
+  C:0016H         LINE#         33
+  C:0016H         LINE#         34
   -------         ENDPROC       MAIN
   -------         ENDMOD        MAIN
 
-Program Size: data=9.0 xdata=0 code=100
+Program Size: data=9.0 xdata=0 code=45
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
